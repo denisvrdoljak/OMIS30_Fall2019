@@ -58,8 +58,21 @@ def enterargs():
     arg1 = request.args.get('arg1')
     return "Arg 1 is: {}".format(arg1)
 
-@app.route('/dealcard')
-def dealcard():
+@app.route('/deal')
+def deal():
+
+global deck
+global hand
+deck = list()
+hand  =list()
+
+for suit in ['S','H','C','D']:
+    for face in [str(f) for f in range(2,10)]+['X','J','Q','K','A']:
+        deck.append(suit+face)
+
+
+@app.route('/hit')
+def hit():
     global hand
     global deck
     card = deck.pop()
@@ -67,8 +80,8 @@ def dealcard():
     cardsleft = len(deck)
     return htmltemplate_DEALCARD.format(card,cardsleft,hand)
 
-@app.route('/showdeck')
-def showdeck():
+@app.route('/stand')
+def stand():
     global deck
     return basic_html_SEEDECK.format(deck)
 

@@ -8,3 +8,5 @@
 grading/*
 
 lab8walkthrough/lab8answer2.py
+
+*.pyc
