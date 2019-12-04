@@ -80,6 +80,11 @@ calc1HTML = """
 <p>&nbsp;</p>
 <p>Welcome to Calculator 1 Enter your parameters below, then click submit:</p>
 <p>&nbsp;</p>
+<a href='/'>--go to HOME/LANDING page--</a>
+<p>&nbsp;</p>
+<a href='/calc_home'>--go to CALC HOME--</a>
+<p>&nbsp;</p>
+
 <p>&nbsp;</p>
 <form action="/calc1result">
 <p>First name:<br /> <input name="firstname" type="text" value="Mickey" /> <br /> Last name:<br /> <input name="lastname" type="text" value="Mouse" /> <br /><br /> <input type="submit" value="Submit" /></p>
@@ -91,6 +96,13 @@ calc1HTML = """
 calc1resultHTML = """
 <!-- OMIS30 HTML Template-->
 <p>&nbsp;</p>
+
+<a href='/'>--go to HOME/LANDING page--</a>
+<p>&nbsp;</p>
+<a href='/calc_home'>--go to CALC HOME--</a>
+<p>&nbsp;</p>
+
+
 <p>The user entered:</p>
 <p>&nbsp;</p>
 <table>
